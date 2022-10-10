@@ -12,10 +12,6 @@ local UICorner_2 = Instance.new("UICorner")
 local module = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
 local ImageLabel = Instance.new("ImageLabel")
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local TextBox = Instance.new("TextBox")
-local TextButton_2 = Instance.new("TextButton")
 
 --Properties:
 
@@ -81,43 +77,9 @@ ImageLabel.Position = UDim2.new(-0.0176490154, 0, -0.0219503567, 0)
 ImageLabel.Size = UDim2.new(0, 400, 0, 400)
 ImageLabel.Image = "http://www.roblox.com/asset/?id=11231145625"
 
-Frame.Parent = EightBall
-Frame.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
-Frame.Position = UDim2.new(0.123428136, 0, 0.285370648, 0)
-Frame.Size = UDim2.new(0, 399, 0, 398)
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-TextLabel.Size = UDim2.new(0, 399, 0, 138)
-TextLabel.Font = Enum.Font.Oswald
-TextLabel.Text = "Enter Password"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-TextBox.Parent = Frame
-TextBox.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
-TextBox.Position = UDim2.new(0.250626564, 0, 0.618090451, 0)
-TextBox.Size = UDim2.new(0, 200, 0, 50)
-TextBox.Font = Enum.Font.SourceSans
-TextBox.Text = "Enter Password.."
-TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.TextSize = 14.000
-
-TextButton_2.Parent = Frame
-TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.BackgroundTransparency = 1.000
-TextButton_2.Position = UDim2.new(0.303258151, 0, 0.743718505, 0)
-TextButton_2.Size = UDim2.new(0, 156, 0, 30)
-TextButton_2.Font = Enum.Font.SourceSans
-TextButton_2.Text = "Submit"
-TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.TextSize = 14.000
-
 -- Scripts:
 
-local function PJKZCA_fake_script() -- base.LocalScript 
+local function JUOYDPR_fake_script() -- base.LocalScript 
 	local script = Instance.new('LocalScript', base)
 
 	local userinputservice = game:GetService("UserInputService")
@@ -139,8 +101,8 @@ local function PJKZCA_fake_script() -- base.LocalScript
 	
 	end)
 end
-coroutine.wrap(PJKZCA_fake_script)()
-local function FDVTFJ_fake_script() -- x.xScript 
+coroutine.wrap(JUOYDPR_fake_script)()
+local function UOUEJIY_fake_script() -- x.xScript 
 	local script = Instance.new('LocalScript', x)
 
 	local players = game.Players.LocalPlayer
@@ -150,8 +112,8 @@ local function FDVTFJ_fake_script() -- x.xScript
 		gui.Enabled = false
 	end)
 end
-coroutine.wrap(FDVTFJ_fake_script)()
-local function OEMP_fake_script() -- TextButton.SystemMessage 
+coroutine.wrap(UOUEJIY_fake_script)()
+local function JQTU_fake_script() -- TextButton.SystemMessage 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Up:Connect(function()
@@ -163,11 +125,10 @@ local function OEMP_fake_script() -- TextButton.SystemMessage
 		script:Destroy()
 	end)
 end
-coroutine.wrap(OEMP_fake_script)()
-local function VZMCE_fake_script() -- TextButton.Startmessage 
+coroutine.wrap(JQTU_fake_script)()
+local function SHWFVA_fake_script() -- TextButton.Startmessage 
 	local script = Instance.new('LocalScript', TextButton)
 
-	
 	local chat = game:GetService("Chat")
 	local players = game:GetService("Players")
 	local player = players.LocalPlayer
@@ -178,8 +139,8 @@ local function VZMCE_fake_script() -- TextButton.Startmessage
 		script:Destroy()
 	end)
 end
-coroutine.wrap(VZMCE_fake_script)()
-local function FXAC_fake_script() -- TextButton.ChatScript 
+coroutine.wrap(SHWFVA_fake_script)()
+local function HJVP_fake_script() -- TextButton.ChatScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local responses = {
@@ -194,8 +155,7 @@ local function FXAC_fake_script() -- TextButton.ChatScript
 	}
 	
 	script.Parent.MouseButton1Down:Connect(function()
-		
-		local player = game.Players.LocalPlayer
+		local player = game.Players:GetPlayers()
 			player.Chatted:Connect(function(msg)
 				local rem = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
 				local randomResponse = responses[math.random(1,#responses)]
@@ -207,8 +167,8 @@ local function FXAC_fake_script() -- TextButton.ChatScript
 		end)
 	
 end
-coroutine.wrap(FXAC_fake_script)()
-local function OPZJRIF_fake_script() -- TextButton.Credits 
+coroutine.wrap(HJVP_fake_script)()
+local function QHTMKDX_fake_script() -- TextButton.Credits 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -223,8 +183,8 @@ local function OPZJRIF_fake_script() -- TextButton.Credits
 		end)
 	end)
 end
-coroutine.wrap(OPZJRIF_fake_script)()
-local function QLWX_fake_script() -- TextButton.Prefix 
+coroutine.wrap(QHTMKDX_fake_script)()
+local function KFWY_fake_script() -- TextButton.Prefix 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -239,35 +199,5 @@ local function QLWX_fake_script() -- TextButton.Prefix
 		end)
 	end)
 end
-coroutine.wrap(QLWX_fake_script)()
-local function QYKLT_fake_script() -- base.LocalScript 
-	local script = Instance.new('LocalScript', base)
-
-	local player = game.Players.LocalPlayer
-	local mouse = player:GetMouse()
-	
-	mouse.Button1Down:Connect(function()
-		script.Parent.Holding.Value = true
-	end)
-	
-	mouse.Button1Up:Connect(function()
-		script.Parent.Holding.Value = false
-	end)
-	
-	mouse.Move:Connect(function()
-		if script.Parent.Holding.Value == true then
-			script.Parent.base.Position = UDim2.new(0,mouse.X,0,mouse.Y)
-		end
-	end)
-end
-coroutine.wrap(QYKLT_fake_script)()
-local function RTRKORL_fake_script() -- TextButton_2.scip 
-	local script = Instance.new('LocalScript', TextButton_2)
-
-	script.Parent.MouseButton1Up:Connect(function()
-		if script.Parent.Parent.TextBox.Text == "FortniteBangas" then
-			script.Parent.Parent:Destroy()
-		end
-	end)
-end
-coroutine.wrap(RTRKORL_fake_script)()
+coroutine.wrap(KFWY_fake_script)()
+-- base.LocalScript is disabled.
