@@ -79,7 +79,7 @@ ImageLabel.Image = "http://www.roblox.com/asset/?id=11231145625"
 
 -- Scripts:
 
-local function JUOYDPR_fake_script() -- base.LocalScript 
+local function JVLM_fake_script() -- base.LocalScript 
 	local script = Instance.new('LocalScript', base)
 
 	local userinputservice = game:GetService("UserInputService")
@@ -101,8 +101,8 @@ local function JUOYDPR_fake_script() -- base.LocalScript
 	
 	end)
 end
-coroutine.wrap(JUOYDPR_fake_script)()
-local function UOUEJIY_fake_script() -- x.xScript 
+coroutine.wrap(JVLM_fake_script)()
+local function VWUJW_fake_script() -- x.xScript 
 	local script = Instance.new('LocalScript', x)
 
 	local players = game.Players.LocalPlayer
@@ -112,8 +112,8 @@ local function UOUEJIY_fake_script() -- x.xScript
 		gui.Enabled = false
 	end)
 end
-coroutine.wrap(UOUEJIY_fake_script)()
-local function JQTU_fake_script() -- TextButton.SystemMessage 
+coroutine.wrap(VWUJW_fake_script)()
+local function KDWZZ_fake_script() -- TextButton.SystemMessage 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Up:Connect(function()
@@ -125,8 +125,8 @@ local function JQTU_fake_script() -- TextButton.SystemMessage
 		script:Destroy()
 	end)
 end
-coroutine.wrap(JQTU_fake_script)()
-local function SHWFVA_fake_script() -- TextButton.Startmessage 
+coroutine.wrap(KDWZZ_fake_script)()
+local function FAMSXMB_fake_script() -- TextButton.Startmessage 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local chat = game:GetService("Chat")
@@ -139,10 +139,13 @@ local function SHWFVA_fake_script() -- TextButton.Startmessage
 		script:Destroy()
 	end)
 end
-coroutine.wrap(SHWFVA_fake_script)()
-local function HJVP_fake_script() -- TextButton.ChatScript 
+coroutine.wrap(FAMSXMB_fake_script)()
+local function MYUWIBQ_fake_script() -- TextButton.ChatScript 
 	local script = Instance.new('LocalScript', TextButton)
 
+	local Players = game:GetService("Players")
+	local SayMessage = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+	
 	local responses = {
 		"Yes!",
 		"No.",
@@ -154,21 +157,30 @@ local function HJVP_fake_script() -- TextButton.ChatScript
 		"YES"
 	}
 	
+	local on = false
 	script.Parent.MouseButton1Down:Connect(function()
-		local player = game.Players:GetPlayers()
-			player.Chatted:Connect(function(msg)
-				local rem = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
+		on = not on
+	end)
+	
+	local function ball(player)
+		player.Chatted:Connect(function(msg)
+			if on then
 				local randomResponse = responses[math.random(1,#responses)]
 				if msg:lower():match("^.ball") then
-					wait(.2)
-					rem:FireServer(randomResponse, "All")
+					task.wait(.2)
+					SayMessage:FireServer(randomResponse, "All")
 				end
-			end)
+			end
 		end)
+	end
 	
+	for i, player in pairs(Players:GetPlayers()) do
+		ball(player)
+	end
+	Players.PlayerAdded:Connect(ball)
 end
-coroutine.wrap(HJVP_fake_script)()
-local function QHTMKDX_fake_script() -- TextButton.Credits 
+coroutine.wrap(MYUWIBQ_fake_script)()
+local function USGRW_fake_script() -- TextButton.Credits 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -183,8 +195,8 @@ local function QHTMKDX_fake_script() -- TextButton.Credits
 		end)
 	end)
 end
-coroutine.wrap(QHTMKDX_fake_script)()
-local function KFWY_fake_script() -- TextButton.Prefix 
+coroutine.wrap(USGRW_fake_script)()
+local function BBXYAU_fake_script() -- TextButton.Prefix 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -199,5 +211,5 @@ local function KFWY_fake_script() -- TextButton.Prefix
 		end)
 	end)
 end
-coroutine.wrap(KFWY_fake_script)()
+coroutine.wrap(BBXYAU_fake_script)()
 -- base.LocalScript is disabled.
