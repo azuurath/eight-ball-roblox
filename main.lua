@@ -135,7 +135,7 @@ local function FAMSXMB_fake_script() -- TextButton.Startmessage
 	local char = player.Character or player.CharacterAdded:Wait()
 	local ran = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
 	script.Parent.MouseButton1Down:Connect(function()
-		ran:FireServer("Magic ball has been loaded! Prefix is .ball | Made by pizzaboy13", "All")
+		ran:FireServer("Magic ball has been loaded!| Made by pizzaboy13", "All")
 		script:Destroy()
 	end)
 end
