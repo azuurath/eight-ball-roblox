@@ -12,6 +12,13 @@ local UICorner_2 = Instance.new("UICorner")
 local module = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
 local ImageLabel = Instance.new("ImageLabel")
+local commands = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextButton_2 = Instance.new("TextButton")
+local TextLabel_5 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -77,9 +84,86 @@ ImageLabel.Position = UDim2.new(-0.0176490154, 0, -0.0219503567, 0)
 ImageLabel.Size = UDim2.new(0, 400, 0, 400)
 ImageLabel.Image = "http://www.roblox.com/asset/?id=11231145625"
 
+commands.Name = "commands"
+commands.Parent = base
+commands.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+commands.Position = UDim2.new(-0.0854428262, 0, -0.0519690737, 0)
+commands.Size = UDim2.new(0, 426, 0, 412)
+commands.Visible = false
+
+TextLabel.Parent = commands
+TextLabel.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+TextLabel.Size = UDim2.new(0, 426, 0, 69)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "Command Menu"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = commands
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0, 0, 0.262135923, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = ".prefix  - Says the current prefix."
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = commands
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0, 0, 0.436893195, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = ".ball - Activates the 8-ball."
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = commands
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0, 0, 0.618932068, 0)
+TextLabel_4.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = ".cred - Says the owner of the script"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+TextButton_2.Parent = commands
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+TextButton_2.BackgroundTransparency = 0.800
+TextButton_2.Position = UDim2.new(0.814553976, 0, 0.451456308, 0)
+TextButton_2.Size = UDim2.new(0, 79, 0, 50)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "→"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+TextLabel_5.Parent = commands
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0.814553976, 0, 0.572815537, 0)
+TextLabel_5.Size = UDim2.new(0, 79, 0, 50)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "Exit"
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
 -- Scripts:
 
-local function JVLM_fake_script() -- base.LocalScript 
+local function AHCO_fake_script() -- base.LocalScript 
 	local script = Instance.new('LocalScript', base)
 
 	local userinputservice = game:GetService("UserInputService")
@@ -101,8 +185,8 @@ local function JVLM_fake_script() -- base.LocalScript
 	
 	end)
 end
-coroutine.wrap(JVLM_fake_script)()
-local function VWUJW_fake_script() -- x.xScript 
+coroutine.wrap(AHCO_fake_script)()
+local function YTFXVJ_fake_script() -- x.xScript 
 	local script = Instance.new('LocalScript', x)
 
 	local players = game.Players.LocalPlayer
@@ -112,8 +196,8 @@ local function VWUJW_fake_script() -- x.xScript
 		gui.Enabled = false
 	end)
 end
-coroutine.wrap(VWUJW_fake_script)()
-local function KDWZZ_fake_script() -- TextButton.SystemMessage 
+coroutine.wrap(YTFXVJ_fake_script)()
+local function JRKIDWT_fake_script() -- TextButton.SystemMessage 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Up:Connect(function()
@@ -125,8 +209,8 @@ local function KDWZZ_fake_script() -- TextButton.SystemMessage
 		script:Destroy()
 	end)
 end
-coroutine.wrap(KDWZZ_fake_script)()
-local function FAMSXMB_fake_script() -- TextButton.Startmessage 
+coroutine.wrap(JRKIDWT_fake_script)()
+local function RXIXHL_fake_script() -- TextButton.Startmessage 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local chat = game:GetService("Chat")
@@ -135,12 +219,12 @@ local function FAMSXMB_fake_script() -- TextButton.Startmessage
 	local char = player.Character or player.CharacterAdded:Wait()
 	local ran = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
 	script.Parent.MouseButton1Down:Connect(function()
-		ran:FireServer("Magic ball has been loaded!| Made by pizzaboy13", "All")
+		ran:FireServer("script loaded! Open cmds with .cmds | Made by pizzaboy13", "All")
 		script:Destroy()
 	end)
 end
-coroutine.wrap(FAMSXMB_fake_script)()
-local function MYUWIBQ_fake_script() -- TextButton.ChatScript 
+coroutine.wrap(RXIXHL_fake_script)()
+local function WTMN_fake_script() -- TextButton.ChatScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local Players = game:GetService("Players")
@@ -179,8 +263,8 @@ local function MYUWIBQ_fake_script() -- TextButton.ChatScript
 	end
 	Players.PlayerAdded:Connect(ball)
 end
-coroutine.wrap(MYUWIBQ_fake_script)()
-local function USGRW_fake_script() -- TextButton.Credits 
+coroutine.wrap(WTMN_fake_script)()
+local function ZDNLN_fake_script() -- TextButton.Credits 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -195,8 +279,8 @@ local function USGRW_fake_script() -- TextButton.Credits
 		end)
 	end)
 end
-coroutine.wrap(USGRW_fake_script)()
-local function BBXYAU_fake_script() -- TextButton.Prefix 
+coroutine.wrap(ZDNLN_fake_script)()
+local function EIYDF_fake_script() -- TextButton.Prefix 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -211,5 +295,31 @@ local function BBXYAU_fake_script() -- TextButton.Prefix
 		end)
 	end)
 end
-coroutine.wrap(BBXYAU_fake_script)()
+coroutine.wrap(EIYDF_fake_script)()
+local function BQDSA_fake_script() -- TextButton.Cmds 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		local player = game.Players.LocalPlayer
+		player.Chatted:Connect(function(msg)
+	
+			local rej = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
+			if msg:lower():match("^.cmds") then
+				wait(.2)
+				game.Players.LocalPlayer.PlayerGui.EightBall.base.commands.Visible = true
+			end
+		end)
+	end)
+end
+coroutine.wrap(BQDSA_fake_script)()
 -- base.LocalScript is disabled.
+local function SSXQV_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	local gui = game.Players.LocalPlayer.PlayerGui.EightBall.base.commands
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		gui.Visible = false
+	end)
+end
+coroutine.wrap(SSXQV_fake_script)()
