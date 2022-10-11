@@ -231,14 +231,14 @@ local function WTMN_fake_script() -- TextButton.ChatScript
 	local SayMessage = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
 	
 	local responses = {
-		"Yes!",
-		"No.",
-		"Absolutely not",
-		"Absolutely",
-		"Maybe...",
-		"It's possible",
-		"NO",
-		"YES"
+		"🔮 Yes",
+		"🔮 No",
+		"🔮 Absolutely not",
+		"🔮 Absolutely",
+		"🔮 Maybe...",
+		"🔮 It's possible",
+		"🔮 NO",
+		"🔮 YES"
 	}
 	
 	local on = false
