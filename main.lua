@@ -210,20 +210,6 @@ local function JRKIDWT_fake_script() -- TextButton.SystemMessage
 	end)
 end
 coroutine.wrap(JRKIDWT_fake_script)()
-local function RXIXHL_fake_script() -- TextButton.Startmessage 
-	local script = Instance.new('LocalScript', TextButton)
-
-	local chat = game:GetService("Chat")
-	local players = game:GetService("Players")
-	local player = players.LocalPlayer
-	local char = player.Character or player.CharacterAdded:Wait()
-	local ran = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
-	script.Parent.MouseButton1Down:Connect(function()
-		ran:FireServer("script loaded! Open cmds with .cmds | Made by pizzaboy13", "All")
-		script:Destroy()
-	end)
-end
-coroutine.wrap(RXIXHL_fake_script)()
 local function WTMN_fake_script() -- TextButton.ChatScript 
 	local script = Instance.new('LocalScript', TextButton)
 
